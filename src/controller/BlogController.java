@@ -62,6 +62,15 @@ public class BlogController extends HttpServlet {
 			RequestDispatcher rd=this.getServletContext().getRequestDispatcher("/WEB-INF/views/blogView.jsp");
 			rd.forward(request, response);
 		}
+       else{
+			
+			request.setAttribute("error", "Your blog cannot be added as it contains offensive words, Please check your blog");
+
+			RequestDispatcher rd=this.getServletContext().getRequestDispatcher("/WEB-INF/views/blogView.jsp");
+			rd.forward(request, response);
+			
+			
+		}
 		
 	}
 

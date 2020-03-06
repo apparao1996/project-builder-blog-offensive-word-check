@@ -42,7 +42,7 @@ public class CheckBlogPost extends OffensiveWordsChecker implements OffensiveWor
 	
 	public boolean checkBlog(Blog blog)
 	{
-		if((checkBlogTitle(blog))&&(checkBlogDescription(blog)))
+		if((checkBlogTitle(blog))||(checkBlogDescription(blog)))
 			return false;
 		return true;
 	}
